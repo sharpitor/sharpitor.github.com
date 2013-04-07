@@ -3,8 +3,6 @@ var annotated =
     [ "polygonal", null, [
       [ "view", "namespacepolygonal_1_1view.html", null ]
     ] ],
-    [ "ColourLabel", "class_colour_label.html", "class_colour_label" ],
-    [ "ColourSettings", "class_colour_settings.html", "class_colour_settings" ],
     [ "Elevation", "class_elevation.html", "class_elevation" ],
     [ "GLCanvas", "class_g_l_canvas.html", "class_g_l_canvas" ],
     [ "GraphPaper", "class_graph_paper.html", "class_graph_paper" ],

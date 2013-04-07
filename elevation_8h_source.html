@@ -104,13 +104,13 @@ $(document).ready(function(){initNavTree('elevation_8h_source.html','');});
 <div class="title">elevation.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/***************************************************************************************************************</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/****************************************************************</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">**</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">** Copyright (C) 2013 Nicholas Braun</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">**</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">** This file is part of the Sharpitor Physics CAD Framework</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">**</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">********************************************************************************************************************/</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">*****************************************************************/</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef ELEVATION_H</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define ELEVATION_H</span></div>
@@ -118,7 +118,7 @@ $(document).ready(function(){initNavTree('elevation_8h_source.html','');});
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;sharpitor_pcf_tree_mv/tree_mv.h&quot;</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;graphpaper.h&quot;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="class_elevation.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_elevation.html" title="Abstract class for zoomable 2d drawing on graphpaper. Typically for plan/sections.">Elevation</a> : <span class="keyword">public</span> QGraphicsScene</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="code" href="class_elevation.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_elevation.html" title="Interface for zoomable 2d drawing on graphpaper; typically for plan/sections.">Elevation</a> : <span class="keyword">public</span> QGraphicsScene</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;Q_OBJECT</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">float</span> canvasWidthInFiducialUnits;  <span class="comment">// canvas width in units of fiducial length sigma; this sets the scaling</span></div>
@@ -127,7 +127,7 @@ $(document).ready(function(){initNavTree('elevation_8h_source.html','');});
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_graph_paper.html" title="composite element for Elevation">GraphPaper</a> graphPaper;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_elevation.html#a11bd7d16ce2d9ab07f4ba67105e7c5d5">Elevation</a>(<span class="keyword">const</span> <a class="code" href="class_tree_m_v.html" title="Abstract superclass for LuteTreeMV.">TreeMV</a> *treeMV, <span class="keywordtype">int</span> zoom, <span class="keywordtype">float</span> cw_);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_elevation.html#a11bd7d16ce2d9ab07f4ba67105e7c5d5">Elevation</a>(<span class="keyword">const</span> <a class="code" href="class_tree_m_v.html" title="Interface for parameters model-view.">TreeMV</a> *treeMV, <span class="keywordtype">int</span> zoom, <span class="keywordtype">float</span> cw_);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> show(){view-&gt;show();}</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code" href="class_elevation.html#af7043e28659f8adec9b68fd9b2ea5b9b" title="fiducial length for the drawing, e.g. LWL in metres for a boat, OSL in cm for a lute NB units implied...">sigma</a>() <span class="keyword">const</span>=0;</div>
@@ -136,7 +136,7 @@ $(document).ready(function(){initNavTree('elevation_8h_source.html','');});
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">int</span> currentHighlight()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> highlight; }</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> updateZoom();</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_elevation.html#adaf403b2800d725b36712eab09a10713" title="convert from fiducial units to canvas units. Parameters retrieved from the structural model should us...">cu</a>(<span class="keywordtype">float</span> fiducialUnits) <span class="keyword">const</span>;  <span class="comment">// convert to canvas units</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">float</span> <a class="code" href="class_elevation.html#adaf403b2800d725b36712eab09a10713" title="convert from fiducial units to canvas units. Parameters retrieved from e.g. HaploModel should usually...">cu</a>(<span class="keywordtype">float</span> fiducialUnits) <span class="keyword">const</span>;  <span class="comment">// convert to canvas units</span></div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> wheelEvent(QGraphicsSceneWheelEvent *event);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
@@ -159,7 +159,7 @@ $(document).ready(function(){initNavTree('elevation_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_eabc6ac74064bfad6d81ba3de60a0652.html">sharpitor_pcf_elevations</a></li><li class="navelem"><b>elevation.h</b></li>
-    <li class="footer">Generated on Sun Apr 7 2013 12:52:14 for Sharpitor Physics by
+    <li class="footer">Generated on Sun Apr 7 2013 14:28:20 for Sharpitor Physics by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>

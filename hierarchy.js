@@ -2,7 +2,6 @@ var hierarchy =
 [
     [ "Part", "class_part.html", null ],
     [ "QDialog", null, [
-      [ "ColourSettings", "class_colour_settings.html", null ],
       [ "TexturesLib", "class_textures_lib.html", null ]
     ] ],
     [ "QGLWidget", null, [
@@ -20,9 +19,6 @@ var hierarchy =
     ] ],
     [ "QItemDelegate", null, [
       [ "SpinBoxDelegate", "class_spin_box_delegate.html", null ]
-    ] ],
-    [ "QLabel", null, [
-      [ "ColourLabel", "class_colour_label.html", null ]
     ] ],
     [ "QList", null, [
       [ "GraphPaper", "class_graph_paper.html", null ],

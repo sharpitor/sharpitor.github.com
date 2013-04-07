@@ -114,7 +114,7 @@ $(document).ready(function(){initNavTree('class_elevation.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>Abstract class for zoomable 2d drawing on graphpaper. Typically for plan/sections.  
+<p>Interface for zoomable 2d drawing on graphpaper; typically for plan/sections.  
  <a href="class_elevation.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="elevation_8h_source.html">elevation.h</a>&gt;</code></p>
@@ -162,7 +162,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>updateZoom</b> ()</td
 <tr class="separator:a901539762a18baa9b51df1cfac2df5ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adaf403b2800d725b36712eab09a10713"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adaf403b2800d725b36712eab09a10713"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_elevation.html#adaf403b2800d725b36712eab09a10713">cu</a> (float fiducialUnits) const </td></tr>
-<tr class="memdesc:adaf403b2800d725b36712eab09a10713"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert from fiducial units to canvas units. Parameters retrieved from the structural model should usually be in fiducial units. <br/></td></tr>
+<tr class="memdesc:adaf403b2800d725b36712eab09a10713"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert from fiducial units to canvas units. Parameters retrieved from e.g. <a class="el" href="class_haplo_model.html" title="Interface for the parametric MODEL core.">HaploModel</a> should usually be in fiducial units. <br/></td></tr>
 <tr class="separator:adaf403b2800d725b36712eab09a10713"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b8942d5a9e422b7b819906d11a486be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b8942d5a9e422b7b819906d11a486be"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>wheelEvent</b> (QGraphicsSceneWheelEvent *event)</td></tr>
@@ -175,8 +175,8 @@ QGraphicsView *&#160;</td><td class="memItemRight" valign="bottom"><b>view</b></
 <tr class="separator:a707c6da75d14514ea0c9847bb9e88973"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Abstract class for zoomable 2d drawing on graphpaper. Typically for plan/sections. </p>
-<p>Graphpaper and the drawing (as QGraphicsItem) are added in the subclass. If a <a class="el" href="class_tree_m_v.html" title="Abstract superclass for LuteTreeMV.">TreeMV</a> instance is passed, its selection signals set the highlight state which may be used by the drawing update </p>
+<div class="textblock"><p>Interface for zoomable 2d drawing on graphpaper; typically for plan/sections. </p>
+<p>Graphpaper and the drawing (as QGraphicsItem) are added in the subclass. If a <a class="el" href="class_tree_m_v.html" title="Interface for parameters model-view.">TreeMV</a> instance is passed, it is wired to the <b>highlight</b> state and a drawing update </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a11bd7d16ce2d9ab07f4ba67105e7c5d5"></a>
 <div class="memitem">
@@ -226,7 +226,7 @@ QGraphicsView *&#160;</td><td class="memItemRight" valign="bottom"><b>view</b></
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_elevation.html">Elevation</a></li>
-    <li class="footer">Generated on Sun Apr 7 2013 12:52:14 for Sharpitor Physics by
+    <li class="footer">Generated on Sun Apr 7 2013 14:28:20 for Sharpitor Physics by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
   </ul>
