@@ -3,10 +3,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Polygonal: C:/Users/Lisa/Desktop/polygonal/src/polygonal/polygonal.h Source File</title>
+<title>Sharpitor Physics: sharpitor_pcf_polygonal/polygonal.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -20,11 +26,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Strombus_pugilis_01.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Polygonal
-   &#160;<span id="projectnumber">1.0</span>
+   <div id="projectname">Sharpitor Physics
    </div>
-   <div id="projectbrief">minimal MVC for 3d scenes</div>
+   <div id="projectbrief">Biomimetic structural modelling and visualization</div>
   </td>
  </tr>
  </tbody>
@@ -62,15 +68,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('polygonal_8h_source.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -79,125 +99,84 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_926dbf3c44f71e23575b32797f309dea.html">polygonal</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">polygonal.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="polygonal_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/***************************************************************************************************************</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/***************************************************************************************************************</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">**</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">** Copyright (C) 2010, 2012 Nicholas Braun</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">** Copyright (C) 2013 Nicholas Braun</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">**</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">** This file is part of the Polygonal module of the Sharpitor Parametric CAD Toolkit</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">** This file is part of the Sharpitor Physics CAD Framework</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">**</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">** You may use this file under the terms of the MIT license.</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">** NB For documentation and license information relating to libraries included from the Qt project, see http://www.qt-project.org/</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">**</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">** The MIT license</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">**</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">** Permission is hereby granted, free of charge, to any person obtaining a copy of this software and</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">** associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">** without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">** copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">** following conditions:</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">**</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">** The above copyright notice and this permission notice shall be included in all copies or substantial</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">** portions of the Software.</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">**</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">** THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">** TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">** THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">** CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">** DEALINGS IN THE SOFTWARE.</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">**</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">********************************************************************************************************************/</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#ifndef POLYGONAL_H</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define POLYGONAL_H</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#include &lt;QtOpenGL&gt;</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#include &lt;QtGui&gt;</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="code" href="polygonal_8h.html#a2f54719dcdf8932e3141388b38dee848">  108</a></span>&#160;<span class="preprocessor">#define DEFAULT_COLOUR  10,150,10</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00113"></a><span class="lineno"><a class="code" href="class_face.html">  113</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_face.html" title="triangle, quad or general polygonal surface. For non-convex faces, must use setConvex(false) to invok...">Face</a></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;{</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00116"></a><span class="lineno"><a class="code" href="class_face.html#afdb634bc2d5287ba0d62e46b57e9dc2e">  116</a></span>&#160;    <a class="code" href="class_face.html#afdb634bc2d5287ba0d62e46b57e9dc2e">Face</a>(){};</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="class_face.html#afdb634bc2d5287ba0d62e46b57e9dc2e">Face</a>(<span class="keyword">const</span> QList&lt;QVector3D&gt; &amp;<a class="code" href="class_face.html#ae4b7c53531e75fb43698be64b5d1ac1f">vertices</a>);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="class_face.html#afdb634bc2d5287ba0d62e46b57e9dc2e">Face</a>(<span class="keyword">const</span> QList&lt;QVector3D&gt; &amp;<a class="code" href="class_face.html#ae4b7c53531e75fb43698be64b5d1ac1f">vertices</a>, <span class="keyword">const</span> QList&lt;QVector3D&gt; &amp;<a class="code" href="class_face.html#a10d656a43f000355e484614489775d02">normals</a>);</div>
-<div class="line"><a name="l00125"></a><span class="lineno"><a class="code" href="class_face.html#ae4b7c53531e75fb43698be64b5d1ac1f">  125</a></span>&#160;    QList&lt;QVector3D&gt; <a class="code" href="class_face.html#ae4b7c53531e75fb43698be64b5d1ac1f">vertices</a>;</div>
-<div class="line"><a name="l00126"></a><span class="lineno"><a class="code" href="class_face.html#a10d656a43f000355e484614489775d02">  126</a></span>&#160;    QList&lt;QVector3D&gt; <a class="code" href="class_face.html#a10d656a43f000355e484614489775d02">normals</a>;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <a class="code" href="class_face.html#afdb634bc2d5287ba0d62e46b57e9dc2e">Face</a>(<span class="keywordtype">float</span> ax,<span class="keywordtype">float</span> ay,<span class="keywordtype">float</span> az,</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;         <span class="keywordtype">float</span> bx,<span class="keywordtype">float</span> by,<span class="keywordtype">float</span> bz,</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;         <span class="keywordtype">float</span> cx,<span class="keywordtype">float</span> cy,<span class="keywordtype">float</span> cz,</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;         <span class="keywordtype">float</span> dx,<span class="keywordtype">float</span> dy,<span class="keywordtype">float</span> dz);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <a class="code" href="class_face.html#afdb634bc2d5287ba0d62e46b57e9dc2e">Face</a>(<span class="keywordtype">float</span> ax,<span class="keywordtype">float</span> ay,<span class="keywordtype">float</span> az,        <span class="keywordtype">float</span> nax,<span class="keywordtype">float</span> nay,<span class="keywordtype">float</span> naz,</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;         <span class="keywordtype">float</span> bx,<span class="keywordtype">float</span> by,<span class="keywordtype">float</span> bz,        <span class="keywordtype">float</span> nbx,<span class="keywordtype">float</span> nby,<span class="keywordtype">float</span> nbz,</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;         <span class="keywordtype">float</span> cx,<span class="keywordtype">float</span> cy,<span class="keywordtype">float</span> cz,        <span class="keywordtype">float</span> ncx,<span class="keywordtype">float</span> ncy,<span class="keywordtype">float</span> ncz,</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;         <span class="keywordtype">float</span> dx,<span class="keywordtype">float</span> dy,<span class="keywordtype">float</span> dz,        <span class="keywordtype">float</span> ndx,<span class="keywordtype">float</span> ndy,<span class="keywordtype">float</span> ndz);</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
-<div class="line"><a name="l00142"></a><span class="lineno"><a class="code" href="class_face.html#ad65977f2c5b015e6adb9c0ff6dd73133">  142</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_face.html#ad65977f2c5b015e6adb9c0ff6dd73133">setConvex</a>(<span class="keywordtype">bool</span> flag) {convex=flag;}</div>
-<div class="line"><a name="l00143"></a><span class="lineno"><a class="code" href="class_face.html#a4cdf4e8ccb795b9247e0016582489c18">  143</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_face.html#a4cdf4e8ccb795b9247e0016582489c18">isConvex</a>() {<span class="keywordflow">return</span> convex;}</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">bool</span> convex;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;};</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno"><a class="code" href="class_part.html">  152</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_part.html" title="groups faces with same colour">Part</a>: <span class="keyword">public</span> QList&lt;Face&gt;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;{</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00155"></a><span class="lineno"><a class="code" href="class_part.html#a09385851011125e4f9bbe1c4712f1e1f">  155</a></span>&#160;   <a class="code" href="class_part.html#a09385851011125e4f9bbe1c4712f1e1f">Part</a>(){};</div>
-<div class="line"><a name="l00156"></a><span class="lineno"><a class="code" href="class_part.html#ae60d190e9051081f9d50622962962093">  156</a></span>&#160;   <a class="code" href="class_part.html#ae60d190e9051081f9d50622962962093">Part</a>(QString name){ this-&gt;name=name; colour=QColor(<a class="code" href="polygonal_8h.html#a2f54719dcdf8932e3141388b38dee848">DEFAULT_COLOUR</a>); }</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno"><a class="code" href="class_part.html#a374983d8e51a86c70872261e66645063">  158</a></span>&#160;   <span class="keywordtype">void</span> <a class="code" href="class_part.html#a374983d8e51a86c70872261e66645063">setColour</a>(QColor colour){ this-&gt;colour =colour; }</div>
-<div class="line"><a name="l00159"></a><span class="lineno"><a class="code" href="class_part.html#a3760e5a2f168808c11d54628e324e424">  159</a></span>&#160;   QColor <a class="code" href="class_part.html#a3760e5a2f168808c11d54628e324e424">getColour</a>(){<span class="keywordflow">return</span> colour;}</div>
-<div class="line"><a name="l00160"></a><span class="lineno"><a class="code" href="class_part.html#a8e8afaf07c08be0b94e79d1aa188f343">  160</a></span>&#160;   QString <a class="code" href="class_part.html#a8e8afaf07c08be0b94e79d1aa188f343">getName</a>(){<span class="keywordflow">return</span> name;}</div>
-<div class="line"><a name="l00161"></a><span class="lineno"><a class="code" href="class_part.html#a27e4a6091e84e87bc5665b43ad869825">  161</a></span>&#160;   QString <a class="code" href="class_part.html#a27e4a6091e84e87bc5665b43ad869825">mtlColour</a>()<span class="comment">// colour in Wavefront Obj format (i.e. materials .mtl)</span></div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;   {</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;       <span class="keywordflow">return</span> QString(<span class="stringliteral">&quot;Ka %1 %2 %3 \n Kd %1 %2 %3 \n&quot;</span>).arg( colour.redF(),0,<span class="charliteral">&#39;f&#39;</span>,3)</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;                                                  .arg( colour.greenF(),0,<span class="charliteral">&#39;f&#39;</span>,3)</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                                                  .arg( colour.blueF(),0,<span class="charliteral">&#39;f&#39;</span>,3);</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;   }</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    QString name;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    QColor colour;</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;}</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
-<div class="line"><a name="l00178"></a><span class="lineno"><a class="code" href="class_polygonal.html">  178</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_polygonal.html" title="Provides API functionality and acts as top-level container for the scene.">Polygonal</a>: <span class="keyword">public</span> QObject, <span class="keyword">public</span> QList&lt;Part&gt;{</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;Q_OBJECT</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00182"></a><span class="lineno"><a class="code" href="class_polygonal.html#ab2f212430d6c01ea42e050bba5fadeec">  182</a></span>&#160;    <a class="code" href="class_polygonal.html#ab2f212430d6c01ea42e050bba5fadeec">Polygonal</a>(){};</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    QStringList <a class="code" href="class_polygonal.html#ae8dafc39744c392617b027dff73aae7c" title="export to Wavefront Object file (.obj)">exportObj</a>(QString path);</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_polygonal.html#ae8dafc39744c392617b027dff73aae7c" title="export to Wavefront Object file (.obj)">exportObj</a>(QWidget *aParentWidget);</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    QDialog *<a class="code" href="class_polygonal.html#a9127c57d6143da235b89e524f374011c">createColoursDialog</a> ( QWidget *aParentWidget);</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    QGLWidget *<a class="code" href="class_polygonal.html#a02b7c7b550bcc7b070db9807ccd446db">create3DView</a> ( QWidget *aParentWidget);</div>
-<div class="line"><a name="l00200"></a><span class="lineno"><a class="code" href="class_polygonal.html#a5bfb6dc11e47d2ef6e6fc049dbecf99c">  200</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_polygonal.html#a5bfb6dc11e47d2ef6e6fc049dbecf99c" title="callback handler for the colour settings dialog">updateColour</a>(){emit <a class="code" href="class_polygonal.html#ae9dcc2dd19051390dabf18002a5d33e7">colourChange</a>(); };</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;signals:</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_polygonal.html#ae9dcc2dd19051390dabf18002a5d33e7">colourChange</a>();</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;}</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; ;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">********************************************************************************************************************/</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef POLYGONAL_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define POLYGONAL_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;QtOpenGL&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;QtGui&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define DEFAULT_COLOUR  255,255,255</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">class </span><a class="code" href="class_part.html" title="3d component of the Polygonal scene graph">Part</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">class </span><a class="code" href="class_g_l_canvas.html" title="OpenGl rendering of the Polygonal class.">GLCanvas</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="code" href="class_polygonal.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_polygonal.html">Polygonal</a>: <span class="keyword">public</span> QObject, <span class="keyword">public</span> QList&lt;Part *&gt;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;Q_OBJECT</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_polygonal.html">Polygonal</a>(){};</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="class_polygonal.html">Polygonal</a>(){ qDebug()&lt;&lt; <span class="stringliteral">&quot;in Polygonal destructor&quot;</span>;  };</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;     <a class="code" href="class_g_l_canvas.html" title="OpenGl rendering of the Polygonal class.">GLCanvas</a> * <a class="code" href="class_polygonal.html#a6ef71859784acf95f30f4ec121878638" title="NOTE parts added after create3dview will not be in the rendersettings; this is useful e...">create3DView</a>(QWidget *aParentWidget);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;     <a class="code" href="class_g_l_canvas.html" title="OpenGl rendering of the Polygonal class.">GLCanvas</a> *view;   <span class="comment">// owner</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;     <span class="keywordtype">void</span> emitEditSignal(){ emit partRenderingEdited(); }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;signals:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> partRenderingEdited();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; ;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="code" href="class_part.html">   52</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_part.html" title="3d component of the Polygonal scene graph">Part</a></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    QString name;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    QColor colour;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    QString texture;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">bool</span> listCompile; <span class="comment">// if part is e.g. selector; do not generate display list</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="class_polygonal.html">Polygonal</a> *p; <span class="comment">// parent, owned elsewhere;</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;   <a class="code" href="class_part.html" title="3d component of the Polygonal scene graph">Part</a>(){};</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;   <a class="code" href="class_part.html" title="3d component of the Polygonal scene graph">Part</a>(<a class="code" href="class_polygonal.html">Polygonal</a> *p, QString name, QString texture=<span class="stringliteral">&quot;none&quot;</span>, <span class="keywordtype">bool</span> listCompile=<span class="keyword">true</span>): p(p), texture(texture), listCompile(listCompile)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      { this-&gt;name=name; colour=QColor(DEFAULT_COLOUR); }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;   <span class="keywordtype">void</span> setColour(QColor colour){ this-&gt;colour =colour; p-&gt;emitEditSignal(); }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;   QColor getColour(){<span class="keywordflow">return</span> colour;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;   QString getName(){<span class="keywordflow">return</span> name;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;   QString textureKey(){<span class="keywordflow">return</span> texture;}</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;   <span class="keywordtype">void</span> setTexture(QString newTexture){ texture=newTexture; p-&gt;emitEditSignal();}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;   <span class="keyword">virtual</span> <span class="keywordtype">void</span> genGl()=0;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;   <span class="keywordtype">bool</span> doNotCompile()<span class="keyword"> const</span>{ <span class="keywordflow">return</span> !listCompile;}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 10 2013 21:36:04 for Polygonal by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.2
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_268dd6317947c7850f370c4851c81fc0.html">sharpitor_pcf_polygonal</a></li><li class="navelem"><b>polygonal.h</b></li>
+    <li class="footer">Generated on Sun Apr 7 2013 12:52:14 for Sharpitor Physics by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
 </body>
 </html>

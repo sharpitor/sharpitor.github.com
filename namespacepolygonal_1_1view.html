@@ -3,10 +3,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Polygonal: polygonal::view Namespace Reference</title>
+<title>Sharpitor Physics: polygonal::view Namespace Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -20,11 +26,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Strombus_pugilis_01.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Polygonal
-   &#160;<span id="projectnumber">1.0</span>
+   <div id="projectname">Sharpitor Physics
    </div>
-   <div id="projectbrief">minimal MVC for 3d scenes</div>
+   <div id="projectbrief">Biomimetic structural modelling and visualization</div>
   </td>
  </tr>
  </tbody>
@@ -62,15 +68,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="namespaces.html"><span>Namespace&#160;List</span></a></li>
-      <li><a href="namespacemembers.html"><span>Namespace&#160;Members</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('namespacepolygonal_1_1view.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -79,13 +99,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespacepolygonal.html">polygonal</a></li><li class="navelem"><a class="el" href="namespacepolygonal_1_1view.html">view</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">polygonal::view Namespace Reference</div>  </div>
@@ -95,162 +111,54 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>constants governing interactive response  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a286e85b8f4c21b312fa8554520d30be5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a286e85b8f4c21b312fa8554520d30be5"></a>
+const QDir&#160;</td><td class="memItemRight" valign="bottom"><b>texturesFiledir</b> (&quot;texture_files&quot;)</td></tr>
+<tr class="separator:a286e85b8f4c21b312fa8554520d30be5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a73e3c7bf6561caacfe7496e53e6b8f1e"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepolygonal_1_1view.html#a73e3c7bf6561caacfe7496e53e6b8f1e">ZOOM_MIN</a> = 0.05f</td></tr>
+<tr class="memitem:a73e3c7bf6561caacfe7496e53e6b8f1e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73e3c7bf6561caacfe7496e53e6b8f1e"></a>
+const float&#160;</td><td class="memItemRight" valign="bottom"><b>ZOOM_MIN</b> = 0.05f</td></tr>
 <tr class="separator:a73e3c7bf6561caacfe7496e53e6b8f1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a606962c67939087dcb48c3b136ec3353"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepolygonal_1_1view.html#a606962c67939087dcb48c3b136ec3353">ZOOM_MAX</a> = 20.0f</td></tr>
+<tr class="memitem:a606962c67939087dcb48c3b136ec3353"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a606962c67939087dcb48c3b136ec3353"></a>
+const float&#160;</td><td class="memItemRight" valign="bottom"><b>ZOOM_MAX</b> = 20.0f</td></tr>
 <tr class="separator:a606962c67939087dcb48c3b136ec3353"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0056653c0904b893f2fb050ed15b600"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepolygonal_1_1view.html#ad0056653c0904b893f2fb050ed15b600">KEYBD_PANSTEP</a> = 0.02f</td></tr>
+<tr class="memitem:ad0056653c0904b893f2fb050ed15b600"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad0056653c0904b893f2fb050ed15b600"></a>
+const float&#160;</td><td class="memItemRight" valign="bottom"><b>KEYBD_PANSTEP</b> = 0.02f</td></tr>
 <tr class="separator:ad0056653c0904b893f2fb050ed15b600"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2966ab272e565df35b3024a584df434"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepolygonal_1_1view.html#ab2966ab272e565df35b3024a584df434">MOUSE_PANSTEP</a> = 0.0015f</td></tr>
+<tr class="memitem:ab2966ab272e565df35b3024a584df434"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2966ab272e565df35b3024a584df434"></a>
+const float&#160;</td><td class="memItemRight" valign="bottom"><b>MOUSE_PANSTEP</b> = 0.0015f</td></tr>
 <tr class="separator:ab2966ab272e565df35b3024a584df434"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada4a9f7ac2872d16f452d1fdaea75631"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepolygonal_1_1view.html#ada4a9f7ac2872d16f452d1fdaea75631">MOUSE_ZOOMSTEP</a> = 0.002f</td></tr>
+<tr class="memitem:ada4a9f7ac2872d16f452d1fdaea75631"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ada4a9f7ac2872d16f452d1fdaea75631"></a>
+const float&#160;</td><td class="memItemRight" valign="bottom"><b>MOUSE_ZOOMSTEP</b> = 0.002f</td></tr>
 <tr class="separator:ada4a9f7ac2872d16f452d1fdaea75631"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a453c1af1c33e1087900adfa47c7d415b"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepolygonal_1_1view.html#a453c1af1c33e1087900adfa47c7d415b">KEYBD_ZOOMSTEP</a> = 0.0015f</td></tr>
+<tr class="memitem:a453c1af1c33e1087900adfa47c7d415b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a453c1af1c33e1087900adfa47c7d415b"></a>
+const float&#160;</td><td class="memItemRight" valign="bottom"><b>KEYBD_ZOOMSTEP</b> = 0.0015f</td></tr>
 <tr class="separator:a453c1af1c33e1087900adfa47c7d415b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa003bdac5143806318601ceb445dd201"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepolygonal_1_1view.html#aa003bdac5143806318601ceb445dd201">MOUSE_ROTSTEP</a> = 8</td></tr>
+<tr class="memitem:aa003bdac5143806318601ceb445dd201"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa003bdac5143806318601ceb445dd201"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>MOUSE_ROTSTEP</b> = 8</td></tr>
 <tr class="separator:aa003bdac5143806318601ceb445dd201"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ce4da0c8314c2bbd4934ec756a0df24"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepolygonal_1_1view.html#a5ce4da0c8314c2bbd4934ec756a0df24">EASING_DELAY</a> = 0.06f</td></tr>
+<tr class="memitem:a5ce4da0c8314c2bbd4934ec756a0df24"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ce4da0c8314c2bbd4934ec756a0df24"></a>
+const float&#160;</td><td class="memItemRight" valign="bottom"><b>EASING_DELAY</b> = 0.06f</td></tr>
 <tr class="separator:a5ce4da0c8314c2bbd4934ec756a0df24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b2593cb50a693e8a3262d4648694c82"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepolygonal_1_1view.html#a7b2593cb50a693e8a3262d4648694c82">OBJECT_LENGTHSCALE</a> = 10</td></tr>
+<tr class="memitem:a7b2593cb50a693e8a3262d4648694c82"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b2593cb50a693e8a3262d4648694c82"></a>
+const int&#160;</td><td class="memItemRight" valign="bottom"><b>OBJECT_LENGTHSCALE</b> = 10</td></tr>
 <tr class="separator:a7b2593cb50a693e8a3262d4648694c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>constants governing interactive response </p>
-</div><h2 class="groupheader">Variable Documentation</h2>
-<a class="anchor" id="a5ce4da0c8314c2bbd4934ec756a0df24"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const float polygonal::view::EASING_DELAY = 0.06f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="polygonal__view_8cpp_source.html#l00050">50</a> of file <a class="el" href="polygonal__view_8cpp_source.html">polygonal_view.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad0056653c0904b893f2fb050ed15b600"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const float polygonal::view::KEYBD_PANSTEP = 0.02f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="polygonal__view_8cpp_source.html#l00045">45</a> of file <a class="el" href="polygonal__view_8cpp_source.html">polygonal_view.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a453c1af1c33e1087900adfa47c7d415b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const float polygonal::view::KEYBD_ZOOMSTEP = 0.0015f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="polygonal__view_8cpp_source.html#l00048">48</a> of file <a class="el" href="polygonal__view_8cpp_source.html">polygonal_view.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab2966ab272e565df35b3024a584df434"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const float polygonal::view::MOUSE_PANSTEP = 0.0015f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="polygonal__view_8cpp_source.html#l00046">46</a> of file <a class="el" href="polygonal__view_8cpp_source.html">polygonal_view.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aa003bdac5143806318601ceb445dd201"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int polygonal::view::MOUSE_ROTSTEP = 8</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="polygonal__view_8cpp_source.html#l00049">49</a> of file <a class="el" href="polygonal__view_8cpp_source.html">polygonal_view.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ada4a9f7ac2872d16f452d1fdaea75631"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const float polygonal::view::MOUSE_ZOOMSTEP = 0.002f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="polygonal__view_8cpp_source.html#l00047">47</a> of file <a class="el" href="polygonal__view_8cpp_source.html">polygonal_view.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a7b2593cb50a693e8a3262d4648694c82"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int polygonal::view::OBJECT_LENGTHSCALE = 10</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="polygonal__view_8cpp_source.html#l00051">51</a> of file <a class="el" href="polygonal__view_8cpp_source.html">polygonal_view.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a606962c67939087dcb48c3b136ec3353"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const float polygonal::view::ZOOM_MAX = 20.0f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="polygonal__view_8cpp_source.html#l00044">44</a> of file <a class="el" href="polygonal__view_8cpp_source.html">polygonal_view.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a73e3c7bf6561caacfe7496e53e6b8f1e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const float polygonal::view::ZOOM_MIN = 0.05f</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="polygonal__view_8cpp_source.html#l00043">43</a> of file <a class="el" href="polygonal__view_8cpp_source.html">polygonal_view.cpp</a>.</p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 10 2013 21:36:04 for Polygonal by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.2
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>polygonal</b></li><li class="navelem"><a class="el" href="namespacepolygonal_1_1view.html">view</a></li>
+    <li class="footer">Generated on Sun Apr 7 2013 12:52:14 for Sharpitor Physics by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
 </body>
 </html>

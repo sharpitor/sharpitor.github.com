@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['face',['Face',['../class_face.html',1,'']]]
+  ['foothandle',['FootHandle',['../class_foot_handle.html',1,'']]]
 ];

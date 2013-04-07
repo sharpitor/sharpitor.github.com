@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['normals',['normals',['../class_face.html#a10d656a43f000355e484614489775d02',1,'Face']]]
+  ['name',['name',['../class_part.html#a9400e28a3d503958934bf43cf1c48da6',1,'Part']]]
 ];

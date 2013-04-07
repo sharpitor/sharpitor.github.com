@@ -3,10 +3,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Polygonal: Polygonal Class Reference</title>
+<title>Sharpitor Physics: Polygonal Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -20,11 +26,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Strombus_pugilis_01.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Polygonal
-   &#160;<span id="projectnumber">1.0</span>
+   <div id="projectname">Sharpitor Physics
    </div>
-   <div id="projectbrief">minimal MVC for 3d scenes</div>
+   <div id="projectbrief">Biomimetic structural modelling and visualization</div>
   </td>
  </tr>
  </tbody>
@@ -67,12 +73,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_polygonal.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -81,222 +102,59 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-slots">Public Slots</a> &#124;
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_polygonal-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Polygonal Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Provides API functionality and acts as top-level container for the scene.  
- <a href="class_polygonal.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="polygonal_8h_source.html">polygonal.h</a>&gt;</code></p>
-
-<p>Inherits QObject, and QList&lt; Part &gt;.</p>
+<p>Inherits QObject, and QList&lt; Part * &gt;.</p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
+Public Slots</h2></td></tr>
+<tr class="memitem:a6e9ce89ba650080b74bad9ff9b9cd715"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e9ce89ba650080b74bad9ff9b9cd715"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>emitEditSignal</b> ()</td></tr>
+<tr class="separator:a6e9ce89ba650080b74bad9ff9b9cd715"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
-<tr class="memitem:ae9dcc2dd19051390dabf18002a5d33e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_polygonal.html#ae9dcc2dd19051390dabf18002a5d33e7">colourChange</a> ()</td></tr>
-<tr class="separator:ae9dcc2dd19051390dabf18002a5d33e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae19e532f763f887983784949c4e49b0c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae19e532f763f887983784949c4e49b0c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>partRenderingEdited</b> ()</td></tr>
+<tr class="separator:ae19e532f763f887983784949c4e49b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab2f212430d6c01ea42e050bba5fadeec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_polygonal.html#ab2f212430d6c01ea42e050bba5fadeec">Polygonal</a> ()</td></tr>
-<tr class="separator:ab2f212430d6c01ea42e050bba5fadeec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8dafc39744c392617b027dff73aae7c"><td class="memItemLeft" align="right" valign="top">QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_polygonal.html#ae8dafc39744c392617b027dff73aae7c">exportObj</a> (QString path)</td></tr>
-<tr class="memdesc:ae8dafc39744c392617b027dff73aae7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">export to Wavefront Object file (.obj)  <a href="#ae8dafc39744c392617b027dff73aae7c"></a><br/></td></tr>
-<tr class="separator:ae8dafc39744c392617b027dff73aae7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7c54fdb7fde05c6e7756b1368cd9197"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_polygonal.html#aa7c54fdb7fde05c6e7756b1368cd9197">exportObj</a> (QWidget *aParentWidget)</td></tr>
-<tr class="memdesc:aa7c54fdb7fde05c6e7756b1368cd9197"><td class="mdescLeft">&#160;</td><td class="mdescRight">export via a filesave dialog  <a href="#aa7c54fdb7fde05c6e7756b1368cd9197"></a><br/></td></tr>
-<tr class="separator:aa7c54fdb7fde05c6e7756b1368cd9197"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9127c57d6143da235b89e524f374011c"><td class="memItemLeft" align="right" valign="top">QDialog *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_polygonal.html#a9127c57d6143da235b89e524f374011c">createColoursDialog</a> (QWidget *aParentWidget)</td></tr>
-<tr class="separator:a9127c57d6143da235b89e524f374011c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02b7c7b550bcc7b070db9807ccd446db"><td class="memItemLeft" align="right" valign="top">QGLWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_polygonal.html#a02b7c7b550bcc7b070db9807ccd446db">create3DView</a> (QWidget *aParentWidget)</td></tr>
-<tr class="separator:a02b7c7b550bcc7b070db9807ccd446db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bfb6dc11e47d2ef6e6fc049dbecf99c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_polygonal.html#a5bfb6dc11e47d2ef6e6fc049dbecf99c">updateColour</a> ()</td></tr>
-<tr class="memdesc:a5bfb6dc11e47d2ef6e6fc049dbecf99c"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback handler for the colour settings dialog  <a href="#a5bfb6dc11e47d2ef6e6fc049dbecf99c"></a><br/></td></tr>
-<tr class="separator:a5bfb6dc11e47d2ef6e6fc049dbecf99c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ef71859784acf95f30f4ec121878638"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6ef71859784acf95f30f4ec121878638"></a>
+<a class="el" href="class_g_l_canvas.html">GLCanvas</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_polygonal.html#a6ef71859784acf95f30f4ec121878638">create3DView</a> (QWidget *aParentWidget)</td></tr>
+<tr class="memdesc:a6ef71859784acf95f30f4ec121878638"><td class="mdescLeft">&#160;</td><td class="mdescRight">NOTE parts added after create3dview will not be in the rendersettings; this is useful e.g. for the rib manifold. <br/></td></tr>
+<tr class="separator:a6ef71859784acf95f30f4ec121878638"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:acccb4539de92de0307fa95ac5d6587bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acccb4539de92de0307fa95ac5d6587bb"></a>
+<a class="el" href="class_g_l_canvas.html">GLCanvas</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>view</b></td></tr>
+<tr class="separator:acccb4539de92de0307fa95ac5d6587bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Provides API functionality and acts as top-level container for the scene. </p>
-
-<p>Definition at line <a class="el" href="polygonal_8h_source.html#l00178">178</a> of file <a class="el" href="polygonal_8h_source.html">polygonal.h</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ab2f212430d6c01ea42e050bba5fadeec"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Polygonal::Polygonal </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="polygonal_8h_source.html#l00182">182</a> of file <a class="el" href="polygonal_8h_source.html">polygonal.h</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ae9dcc2dd19051390dabf18002a5d33e7"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Polygonal::colourChange </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a02b7c7b550bcc7b070db9807ccd446db"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">QGLWidget * Polygonal::create3DView </td>
-          <td>(</td>
-          <td class="paramtype">QWidget *&#160;</td>
-          <td class="paramname"><em>aParentWidget</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="polygonal_8cpp_source.html#l00187">187</a> of file <a class="el" href="polygonal_8cpp_source.html">polygonal.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a9127c57d6143da235b89e524f374011c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">QDialog * Polygonal::createColoursDialog </td>
-          <td>(</td>
-          <td class="paramtype">QWidget *&#160;</td>
-          <td class="paramname"><em>aParentWidget</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="polygonal_8cpp_source.html#l00182">182</a> of file <a class="el" href="polygonal_8cpp_source.html">polygonal.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ae8dafc39744c392617b027dff73aae7c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">QStringList Polygonal::exportObj </td>
-          <td>(</td>
-          <td class="paramtype">QString&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>export to Wavefront Object file (.obj) </p>
-<dl class="section return"><dt>Returns</dt><dd>files created, .obj and .mtl (colour information) </dd></dl>
-
-<p>Definition at line <a class="el" href="polygonal_8cpp_source.html#l00112">112</a> of file <a class="el" href="polygonal_8cpp_source.html">polygonal.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="aa7c54fdb7fde05c6e7756b1368cd9197"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Polygonal::exportObj </td>
-          <td>(</td>
-          <td class="paramtype">QWidget *&#160;</td>
-          <td class="paramname"><em>aParentWidget</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>export via a filesave dialog </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">aParentWidget</td><td>- a parent window for dialog placement; can be NULL </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>success/failure </dd></dl>
-
-<p>Definition at line <a class="el" href="polygonal_8cpp_source.html#l00086">86</a> of file <a class="el" href="polygonal_8cpp_source.html">polygonal.cpp</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a5bfb6dc11e47d2ef6e6fc049dbecf99c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Polygonal::updateColour </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>callback handler for the colour settings dialog </p>
-
-<p>Definition at line <a class="el" href="polygonal_8h_source.html#l00200">200</a> of file <a class="el" href="polygonal_8h_source.html">polygonal.h</a>.</p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/Lisa/Desktop/polygonal/src/polygonal/<a class="el" href="polygonal_8h_source.html">polygonal.h</a></li>
-<li>C:/Users/Lisa/Desktop/polygonal/src/polygonal/<a class="el" href="polygonal_8cpp_source.html">polygonal.cpp</a></li>
+<li>sharpitor_pcf_polygonal/<a class="el" href="polygonal_8h_source.html">polygonal.h</a></li>
+<li>sharpitor_pcf_polygonal/polygonal.cpp</li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 10 2013 21:36:04 for Polygonal by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.2
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_polygonal.html">Polygonal</a></li>
+    <li class="footer">Generated on Sun Apr 7 2013 12:52:14 for Sharpitor Physics by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
 </body>
 </html>

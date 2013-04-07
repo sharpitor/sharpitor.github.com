@@ -3,10 +3,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Polygonal: Main Page</title>
+<title>Sharpitor Physics: Main Page</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -20,11 +26,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Strombus_pugilis_01.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Polygonal
-   &#160;<span id="projectnumber">1.0</span>
+   <div id="projectname">Sharpitor Physics
    </div>
-   <div id="projectbrief">minimal 3d scene graph management</div>
+   <div id="projectbrief">Biomimetic structural modelling and visualization</div>
   </td>
  </tr>
  </tbody>
@@ -60,12 +66,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     </ul>
   </div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('index.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -76,61 +96,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Polygonal Documentation</div>  </div>
+<div class="title">Sharpitor Physics Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Copyright (c) 2012 Nicholas Braun. MIT License</p>
-<p>Minimal C++ toolkit for managing 3d polygonal mesh compositions.</p>
-<p>Qt module dependencies: QtGui, QtOpenGl and QtCore</p>
-<p><b>Model</b> </p>
-<p>The <a class="el" href="class_polygonal.html" title="Provides API functionality and acts as top-level container for the scene.">Polygonal</a> class stores a composite <a class="el" href="class_part.html" title="groups faces with same colour">Part</a> list and provides API functionality. The <a class="el" href="class_part.html" title="groups faces with same colour">Part</a> class in turn comprises a list of polygonal faces, instances of the <a class="el" href="class_face.html" title="triangle, quad or general polygonal surface. For non-convex faces, must use setConvex(false) to invok...">Face</a> class.</p>
-<p>Rigid body transformations and some geometrical primitives are included in the <a class="el" href="namespacepolygonal_1_1primitives.html" title="return standard geometrical primitives as Part/Face instances">polygonal::primitives</a> and <a class="el" href="namespacepolygonal_1_1transforms.html" title="rigid body manipulation of Part instances">polygonal::transforms</a> namespaces.</p>
-<p>There is support for scene data <b>export</b> in Wavefront Object format (.obj)</p>
-<p><b>View</b> </p>
-<p>The <a class="el" href="class_g_l_canvas.html" title="OpenGl rendering of the Polygonal class.">GLCanvas</a> class provides OpenGl rendering of the scene with interactive zoom, rotation and pan (mouse or keyboard). Easing response is enabled by default.</p>
-<p>Faces declared non-convex are tesselated (without winding rules)</p>
-<p><b>Control</b> </p>
-<p>The <a class="el" href="class_colour_settings.html" title="Palette-like dialog window for editing part colours.">ColourSettings</a> class provides a dialog to control colouring of individual parts in the scene</p>
-<p><b> Example usage </b></p>
-<p>standalone Qt application</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;QApplication&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="polygonal_8h.html">polygonal.h</a>&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="polygonal__primitives_8h.html">polygonal_primitives.h</a>&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="polygonal__transforms_8h.html">polygonal_transforms.h</a>&quot;</span></div>
-<div class="line"></div>
-<div class="line"><span class="keywordtype">int</span> <a class="code" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])</div>
-<div class="line">{</div>
-<div class="line">    QApplication app(argc, argv);</div>
-<div class="line">    <a class="code" href="class_polygonal.html" title="Provides API functionality and acts as top-level container for the scene.">Polygonal</a> theScene= <a class="code" href="class_polygonal.html" title="Provides API functionality and acts as top-level container for the scene.">Polygonal</a>();</div>
-<div class="line"></div>
-<div class="line">    <a class="code" href="class_part.html" title="groups faces with same colour">Part</a> part1 = <a class="code" href="class_part.html" title="groups faces with same colour">Part</a>(<span class="stringliteral">&quot;slab&quot;</span>);</div>
-<div class="line">    part1 &lt;&lt; <a class="code" href="namespacepolygonal_1_1primitives.html#a45849bca16fd906f6f260c79aae21a97">polygonal::primitives::box</a>(1,0.1,1);                   <span class="comment">// add box with slab-like dimensions to part</span></div>
-<div class="line">    <a class="code" href="namespacepolygonal_1_1transforms.html#a2e38104b0b11ca562a6e8d0ad2e8d42e">polygonal::transforms::translate</a>(&amp;part1, QVector3D(2.0,0,0));   <span class="comment">// shift the box from the origin</span></div>
-<div class="line">    part1.<a class="code" href="class_part.html#a374983d8e51a86c70872261e66645063">setColour</a>(QColor(200,200,0));                             <span class="comment">// colour it orange</span></div>
-<div class="line"></div>
-<div class="line">    <a class="code" href="class_part.html" title="groups faces with same colour">Part</a> part2 = <a class="code" href="class_part.html" title="groups faces with same colour">Part</a>(<span class="stringliteral">&quot;tapered cylinder&quot;</span>);</div>
-<div class="line">    part2 &lt;&lt; <a class="code" href="namespacepolygonal_1_1primitives.html#aaffae8c2845b95a4bede989d001ac3b3" title="capped/uncapped cylinder with smooth normals">polygonal::primitives::cylinder</a>(0.9,0.5,0.3,30);</div>
-<div class="line"></div>
-<div class="line">    theScene &lt;&lt; part1 &lt;&lt; part2;                                     <span class="comment">// put the parts in the scene</span></div>
-<div class="line"></div>
-<div class="line">    QGLWidget *view3d = theScene.<a class="code" href="class_polygonal.html#a02b7c7b550bcc7b070db9807ccd446db">create3DView</a>(0);</div>
-<div class="line">    view3d-&gt;show();                                                 <span class="comment">// create and open a viewer window</span></div>
-<div class="line"></div>
-<div class="line">    QDialog *colourSettings = theScene.<a class="code" href="class_polygonal.html#a9127c57d6143da235b89e524f374011c">createColoursDialog</a>(view3d);</div>
-<div class="line">    colourSettings-&gt; show();                                        <span class="comment">// create and open a colour settings dialog</span></div>
-<div class="line"></div>
-<div class="line">    <span class="keywordflow">return</span> app.exec();</div>
-<div class="line"></div>
-<div class="line">} </div>
-</div><!-- fragment --><div class="image">
-<img src="example.jpg" alt="example.jpg"/>
-</div>
- </div></div><!-- contents -->
+<div class="textblock"><p>Sharpitor Physics is a Qt-based C++ development framework for constrained parametric CAD.</p>
+<p>It is suitable for general CAD applications, but there is an emphasis on support for biomimetic features, specifically:</p>
+<ul>
+<li>bend-developable surfaces and associated generalized 'anisotropic' elastic response to deformation.</li>
+</ul>
+<ul>
+<li>a biologically-informed 'developmental' approach to surface subdivision</li>
+</ul>
+<p>Author: Nicholas Braun; contact(at)sharpitor.com</p>
+<p>Last update: 04042013 </p>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 10 2013 21:36:04 for Polygonal by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.2
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated on Sun Apr 7 2013 12:52:14 for Sharpitor Physics by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
 </body>
 </html>

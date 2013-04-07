@@ -3,10 +3,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Polygonal: File List</title>
+<title>Sharpitor Physics: File List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
@@ -20,11 +26,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Strombus_pugilis_01.png"/></td>
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Polygonal
-   &#160;<span id="projectnumber">1.0</span>
+   <div id="projectname">Sharpitor Physics
    </div>
-   <div id="projectbrief">minimal MVC for 3d scenes</div>
+   <div id="projectbrief">Biomimetic structural modelling and visualization</div>
   </td>
  </tr>
  </tbody>
@@ -62,16 +68,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li class="current"><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('files.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -85,31 +104,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">File List</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all files with brief descriptions:</div><div class="directory">
-<div class="levels">[detail level <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span><span onclick="javascript:toggleLevel(3);">3</span>]</div><table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><img id="arr_0_" src="ftv2mlastnode.png" alt="\" width="16" height="22" onclick="toggleFolder('0_')"/><img id="img_0_" src="ftv2folderopen.png" alt="-" width="24" height="22" onclick="toggleFolder('0_')"/><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html" target="_self">src</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img id="arr_0_0_" src="ftv2mlastnode.png" alt="\" width="16" height="22" onclick="toggleFolder('0_0_')"/><img id="img_0_0_" src="ftv2folderopen.png" alt="-" width="24" height="22" onclick="toggleFolder('0_0_')"/><a class="el" href="dir_926dbf3c44f71e23575b32797f309dea.html" target="_self">polygonal</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_0_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="main_8cpp_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><a class="el" href="main_8cpp.html" target="_self">main.cpp</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_1_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="polygonal_8cpp_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><a class="el" href="polygonal_8cpp.html" target="_self">polygonal.cpp</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_2_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="polygonal_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><a class="el" href="polygonal_8h.html" target="_self">polygonal.h</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_3_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="polygonal__coloursettings_8cpp_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><a class="el" href="polygonal__coloursettings_8cpp.html" target="_self">polygonal_coloursettings.cpp</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_4_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="polygonal__coloursettings_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><a class="el" href="polygonal__coloursettings_8h.html" target="_self">polygonal_coloursettings.h</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_5_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="polygonal__primitives_8cpp_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><a class="el" href="polygonal__primitives_8cpp.html" target="_self">polygonal_primitives.cpp</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_6_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="polygonal__primitives_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><a class="el" href="polygonal__primitives_8h.html" target="_self">polygonal_primitives.h</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_7_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="polygonal__tesselator_8cpp_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><a class="el" href="polygonal__tesselator_8cpp.html" target="_self">polygonal_tesselator.cpp</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_8_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="polygonal__tesselator_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><a class="el" href="polygonal__tesselator_8h.html" target="_self">polygonal_tesselator.h</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_9_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="polygonal__transforms_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><a class="el" href="polygonal__transforms_8h.html" target="_self">polygonal_transforms.h</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_10_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="polygonal__view_8cpp_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><a class="el" href="polygonal__view_8cpp.html" target="_self">polygonal_view.cpp</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_11_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="polygonal__view_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><a class="el" href="polygonal__view_8h.html" target="_self">polygonal_view.h</a></td><td class="desc"></td></tr>
-<tr id="row_0_0_12_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><a href="tests_8cpp_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><a class="el" href="tests_8cpp.html" target="_self">tests.cpp</a></td><td class="desc"></td></tr>
+<div class="textblock">Here is a list of all documented files with brief descriptions:</div><div class="directory">
+<div class="levels">[detail level <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span>]</div><table class="directory">
+<tr id="row_0_" class="even"><td class="entry"><img id="arr_0_" src="ftv2mnode.png" alt="o" width="16" height="22" onclick="toggleFolder('0_')"/><img id="img_0_" src="ftv2folderopen.png" alt="-" width="24" height="22" onclick="toggleFolder('0_')"/><a class="el" href="dir_eabc6ac74064bfad6d81ba3de60a0652.html" target="_self">sharpitor_pcf_elevations</a></td><td class="desc"></td></tr>
+<tr id="row_0_0_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="elevation_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>elevation.h</b></td><td class="desc"></td></tr>
+<tr id="row_0_1_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><a href="graphpaper_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>graphpaper.h</b></td><td class="desc"></td></tr>
+<tr id="row_1_"><td class="entry"><img id="arr_1_" src="ftv2mnode.png" alt="o" width="16" height="22" onclick="toggleFolder('1_')"/><img id="img_1_" src="ftv2folderopen.png" alt="-" width="24" height="22" onclick="toggleFolder('1_')"/><a class="el" href="dir_18d826a15ced2fec1b6d159ed97a0b7b.html" target="_self">sharpitor_pcf_haplomodel</a></td><td class="desc"></td></tr>
+<tr id="row_1_0_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="haplomodel_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>haplomodel.h</b></td><td class="desc"></td></tr>
+<tr id="row_1_1_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="haplopop_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>haplopop.h</b></td><td class="desc"></td></tr>
+<tr id="row_1_2_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><a href="spinbox__delegate_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>spinbox_delegate.h</b></td><td class="desc"></td></tr>
+<tr id="row_2_"><td class="entry"><img id="arr_2_" src="ftv2mnode.png" alt="o" width="16" height="22" onclick="toggleFolder('2_')"/><img id="img_2_" src="ftv2folderopen.png" alt="-" width="24" height="22" onclick="toggleFolder('2_')"/><a class="el" href="dir_268dd6317947c7850f370c4851c81fc0.html" target="_self">sharpitor_pcf_polygonal</a></td><td class="desc"></td></tr>
+<tr id="row_2_0_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="polygonal_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>polygonal.h</b></td><td class="desc"></td></tr>
+<tr id="row_2_1_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="polygonal__coloursettings_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>polygonal_coloursettings.h</b></td><td class="desc"></td></tr>
+<tr id="row_2_2_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="polygonal__rendersettings_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>polygonal_rendersettings.h</b></td><td class="desc"></td></tr>
+<tr id="row_2_3_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a href="polygonal__textures_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>polygonal_textures.h</b></td><td class="desc"></td></tr>
+<tr id="row_2_4_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><a href="polygonal__view_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>polygonal_view.h</b></td><td class="desc"></td></tr>
+<tr id="row_3_"><td class="entry"><img id="arr_3_" src="ftv2mnode.png" alt="o" width="16" height="22" onclick="toggleFolder('3_')"/><img id="img_3_" src="ftv2folderopen.png" alt="-" width="24" height="22" onclick="toggleFolder('3_')"/><a class="el" href="dir_f8d00454705225966d4271b9fb2d6b3e.html" target="_self">sharpitor_pcf_tree_mv</a></td><td class="desc"></td></tr>
+<tr id="row_3_0_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><a href="tree__mv_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>tree_mv.h</b></td><td class="desc"></td></tr>
+<tr id="row_4_"><td class="entry"><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><a href="doxy__main_8h_source.html"><img src="ftv2doc.png" alt="*" width="24" height="22" /></a><b>doxy_main.h</b></td><td class="desc"></td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 10 2013 21:36:04 for Polygonal by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.2
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated on Sun Apr 7 2013 12:52:14 for Sharpitor Physics by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.2 </li>
+  </ul>
+</div>
 </body>
 </html>
