@@ -100,15 +100,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abb5d1ff32b4c26c9df17a28899cde76d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb5d1ff32b4c26c9df17a28899cde76d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ScaleLegend</b> (QGraphicsScene *parent, QString label, float lenCm, float xCm, float yCm, float sigma, float canvasWidth_)</td></tr>
-<tr class="separator:abb5d1ff32b4c26c9df17a28899cde76d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c9e2dac5106f0853c2d87ddc00ea7b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6c9e2dac5106f0853c2d87ddc00ea7b8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setSigma</b> (float sigma)</td></tr>
-<tr class="separator:a6c9e2dac5106f0853c2d87ddc00ea7b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8944bacf5529a2b19b90424f51f6a7f7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8944bacf5529a2b19b90424f51f6a7f7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ScaleLegend</b> (<a class="el" href="class_elevation.html">Elevation</a> *parent, QString label, float len, float x, float y)</td></tr>
+<tr class="separator:a8944bacf5529a2b19b90424f51f6a7f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>composite element for <a class="el" href="class_elevation.html" title="Interface for zoomable 2d drawing on graphpaper; typically for plan/sections.">Elevation</a> </p>
+<p>parameter metric scale (e.g. cm) matches that of <a class="el" href="class_elevation.html" title="Interface for zoomable 2d drawing on graphpaper; typically for plan/sections.">Elevation</a> fiducial sigma</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">len</td><td>of the legend in metric scaling (e.g. cm) </td></tr>
+    <tr><td class="paramname">x</td><td>in metric scaling wrt to canvas origin </td></tr>
+    <tr><td class="paramname">y</td><td>in metric scaling wrt to canvas origin </td></tr>
+  </table>
+  </dd>
+</dl>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>sharpitor_pcf_elevations/<a class="el" href="graphpaper_8h_source.html">graphpaper.h</a></li>
 <li>sharpitor_pcf_elevations/graphpaper.cpp</li>
@@ -116,7 +122,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setSigma</b> (float s
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 8 2013 11:14:56 for Sharpitor Physics by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Apr 11 2013 10:19:46 for Sharpitor Physics by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

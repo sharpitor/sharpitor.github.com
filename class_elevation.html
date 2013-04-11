@@ -88,6 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#properties">Properties</a> &#124;
 <a href="class_elevation-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Elevation Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -144,6 +145,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>updateZoom</b> ()</td
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_elevation.html#adaf403b2800d725b36712eab09a10713">cu</a> (float fiducialUnits) const </td></tr>
 <tr class="memdesc:adaf403b2800d725b36712eab09a10713"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert from fiducial units to canvas units. Parameters retrieved from e.g. <a class="el" href="class_haplo_model.html" title="Interface for the parametric MODEL core.">HaploModel</a> should usually be in fiducial units. <br/></td></tr>
 <tr class="separator:adaf403b2800d725b36712eab09a10713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f0d2376618326a8f9c6a7cb69eba0f8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f0d2376618326a8f9c6a7cb69eba0f8"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_elevation.html#a6f0d2376618326a8f9c6a7cb69eba0f8">fu</a> (float canvasUnits) const </td></tr>
+<tr class="memdesc:a6f0d2376618326a8f9c6a7cb69eba0f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">convert from canvas units to fiducial units. This is generally needed by <a class="el" href="class_handle.html" title="Abstract grab handle for interactive editing in Elevation.">Handle</a>. <br/></td></tr>
+<tr class="separator:a6f0d2376618326a8f9c6a7cb69eba0f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b8942d5a9e422b7b819906d11a486be"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7b8942d5a9e422b7b819906d11a486be"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>wheelEvent</b> (QGraphicsSceneWheelEvent *event)</td></tr>
 <tr class="separator:a7b8942d5a9e422b7b819906d11a486be"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,6 +158,21 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a707c6da75d14514ea0c9847bb9e88973"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a707c6da75d14514ea0c9847bb9e88973"></a>
 QGraphicsView *&#160;</td><td class="memItemRight" valign="bottom"><b>view</b></td></tr>
 <tr class="separator:a707c6da75d14514ea0c9847bb9e88973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:acc01f75f3882ce289036b160675630df"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc01f75f3882ce289036b160675630df"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>highlight</b></td></tr>
+<tr class="separator:acc01f75f3882ce289036b160675630df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8db293ef538f090dcf3c6a838c4ffd39"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8db293ef538f090dcf3c6a838c4ffd39"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>canvasWidthInFiducialUnits</b></td></tr>
+<tr class="separator:a8db293ef538f090dcf3c6a838c4ffd39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7bea6aa9b978995db2e58891b5a4249"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab7bea6aa9b978995db2e58891b5a4249"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>zoom</b></td></tr>
+<tr class="separator:ab7bea6aa9b978995db2e58891b5a4249"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa877e9af74f973b7624f05d0c98245fa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa877e9af74f973b7624f05d0c98245fa"></a>
+<a class="el" href="class_graph_paper.html">GraphPaper</a>&#160;</td><td class="memItemRight" valign="bottom"><b>graphPaper</b></td></tr>
+<tr class="separator:aa877e9af74f973b7624f05d0c98245fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface for zoomable 2d drawing on graphpaper; typically for plan/sections. </p>
@@ -203,7 +223,7 @@ QGraphicsView *&#160;</td><td class="memItemRight" valign="bottom"><b>view</b></
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 8 2013 11:14:56 for Sharpitor Physics by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Apr 11 2013 10:19:46 for Sharpitor Physics by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>
