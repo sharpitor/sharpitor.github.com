@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Sharpitor Physics: GraphPaper Class Reference</title>
+<title>Sharpitor Physics: MainWin Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -84,59 +84,44 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-slots">Public Slots</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="class_graph_paper-members.html">List of all members</a>  </div>
+<a href="class_main_win-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">GraphPaper Class Reference</div>  </div>
+<div class="title">MainWin Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>composite element for <a class="el" href="class_elevation.html" title="Interface for zoomable 2d drawing on graphpaper; typically for plan/sections.">Elevation</a>  
- <a href="class_graph_paper.html#details">More...</a></p>
+<p>Top level.  
+ <a href="class_main_win.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="graphpaper_8h_source.html">graphpaper.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="mainwin_8h_source.html">mainwin.h</a>&gt;</code></p>
 
-<p>Inherits QGraphicsItem, and QList&lt; QPair&lt; float, int &gt; &gt;.</p>
+<p>Inherits QMainWindow.</p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
+Public Slots</h2></td></tr>
+<tr class="memitem:a58e84765819a888d3997e99664a6b838"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58e84765819a888d3997e99664a6b838"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>on_actionExit_triggered</b> ()</td></tr>
+<tr class="separator:a58e84765819a888d3997e99664a6b838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e6d8f83c616d04c982af51aa5be127b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e6d8f83c616d04c982af51aa5be127b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>on_actionAbout_triggered</b> ()</td></tr>
+<tr class="separator:a5e6d8f83c616d04c982af51aa5be127b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26477e31fee22e6a8daab1a00a0795a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26477e31fee22e6a8daab1a00a0795a0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>on_actionSettings_triggered</b> ()</td></tr>
+<tr class="separator:a26477e31fee22e6a8daab1a00a0795a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a04ad690e2a965d966669c542af0dad56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph_paper.html#a04ad690e2a965d966669c542af0dad56">addGrid</a> (float spacing, int penWidth)</td></tr>
-<tr class="separator:a04ad690e2a965d966669c542af0dad56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3db95fc7e6348ebdb9f6037d972ab941"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3db95fc7e6348ebdb9f6037d972ab941"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MainWin</b> (<a class="el" href="class_elevation.html">Elevation</a> *elevation, <a class="el" href="class_polygonal.html">Polygonal</a> *polygonal, <a class="el" href="class_tree_m_v.html">TreeMV</a> *params, <a class="el" href="class_haplo_pop_m_v.html">HaploPopMV</a> *haploPopMV, QDialog *about, QDialog *settings)</td></tr>
+<tr class="separator:a3db95fc7e6348ebdb9f6037d972ab941"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>composite element for <a class="el" href="class_elevation.html" title="Interface for zoomable 2d drawing on graphpaper; typically for plan/sections.">Elevation</a> </p>
-<p>NB grid spacing units (e.g.cm) match those of the <a class="el" href="class_elevation.html" title="Interface for zoomable 2d drawing on graphpaper; typically for plan/sections.">Elevation</a> fiducial sigma. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a04ad690e2a965d966669c542af0dad56"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void GraphPaper::addGrid </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>spacing</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>penWidth</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>spacing units (e.g. cm) match those of <a class="el" href="class_elevation.html" title="Interface for zoomable 2d drawing on graphpaper; typically for plan/sections.">Elevation</a> fiducial sigma </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>sharpitor_pcf_elevations/<a class="el" href="graphpaper_8h_source.html">graphpaper.h</a></li>
-<li>sharpitor_pcf_elevations/graphpaper.cpp</li>
+<div class="textblock"><p>Top level. </p>
+</div><hr/>The documentation for this class was generated from the following files:<ul>
+<li>sharpitor_pcf_mainwin/<a class="el" href="mainwin_8h_source.html">mainwin.h</a></li>
+<li>sharpitor_pcf_mainwin/mainwin.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

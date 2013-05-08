@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Sharpitor Physics: GraphPaper Class Reference</title>
+<title>Sharpitor Physics: SessionDocShPh Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -85,58 +85,44 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="class_graph_paper-members.html">List of all members</a>  </div>
+<a href="class_session_doc_sh_ph-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">GraphPaper Class Reference</div>  </div>
+<div class="title">SessionDocShPh Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>composite element for <a class="el" href="class_elevation.html" title="Interface for zoomable 2d drawing on graphpaper; typically for plan/sections.">Elevation</a>  
- <a href="class_graph_paper.html#details">More...</a></p>
+<p>Session as xml document.  
+ <a href="class_session_doc_sh_ph.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="graphpaper_8h_source.html">graphpaper.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="session_8h_source.html">session.h</a>&gt;</code></p>
 
-<p>Inherits QGraphicsItem, and QList&lt; QPair&lt; float, int &gt; &gt;.</p>
+<p>Inherits QString.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a04ad690e2a965d966669c542af0dad56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph_paper.html#a04ad690e2a965d966669c542af0dad56">addGrid</a> (float spacing, int penWidth)</td></tr>
-<tr class="separator:a04ad690e2a965d966669c542af0dad56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22f90f89242fb206fead4774433eea9c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a22f90f89242fb206fead4774433eea9c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SessionDocShPh</b> (QString mime, QString comment=&quot;&quot;)</td></tr>
+<tr class="separator:a22f90f89242fb206fead4774433eea9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0a0f364fa5b872b32d08c3a3755bf99"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af0a0f364fa5b872b32d08c3a3755bf99"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>open</b> (QString namespaceUrl, QString formatVersion)</td></tr>
+<tr class="separator:af0a0f364fa5b872b32d08c3a3755bf99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cfad713f628ac403b91b2448664c284"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0cfad713f628ac403b91b2448664c284"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>close</b> ()</td></tr>
+<tr class="separator:a0cfad713f628ac403b91b2448664c284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11df6dc9896ff1949e954fc1bec30e8c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a11df6dc9896ff1949e954fc1bec30e8c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>datestamp</b> (QString createdWith)</td></tr>
+<tr class="separator:a11df6dc9896ff1949e954fc1bec30e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc3646ebeae7c96d89269591a7649408"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc3646ebeae7c96d89269591a7649408"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>writeComment</b> (const QString &amp;comment)</td></tr>
+<tr class="separator:adc3646ebeae7c96d89269591a7649408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1feeb8c8de094ffdddce74eda85d6abf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1feeb8c8de094ffdddce74eda85d6abf"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>writeRenderAtts</b> (<a class="el" href="class_polygonal.html">Polygonal</a> *composition)</td></tr>
+<tr class="separator:a1feeb8c8de094ffdddce74eda85d6abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>composite element for <a class="el" href="class_elevation.html" title="Interface for zoomable 2d drawing on graphpaper; typically for plan/sections.">Elevation</a> </p>
-<p>NB grid spacing units (e.g.cm) match those of the <a class="el" href="class_elevation.html" title="Interface for zoomable 2d drawing on graphpaper; typically for plan/sections.">Elevation</a> fiducial sigma. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a04ad690e2a965d966669c542af0dad56"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void GraphPaper::addGrid </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>spacing</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>penWidth</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>spacing units (e.g. cm) match those of <a class="el" href="class_elevation.html" title="Interface for zoomable 2d drawing on graphpaper; typically for plan/sections.">Elevation</a> fiducial sigma </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>sharpitor_pcf_elevations/<a class="el" href="graphpaper_8h_source.html">graphpaper.h</a></li>
-<li>sharpitor_pcf_elevations/graphpaper.cpp</li>
+<div class="textblock"><p>Session as xml document. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
+<li>sharpitor_pcf_session/<a class="el" href="session_8h_source.html">session.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

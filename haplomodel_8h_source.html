@@ -24,7 +24,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">Sharpitor Physics
    </div>
-   <div id="projectbrief">Biomimetic structural modelling and visualization</div>
+   <div id="projectbrief">Qt-based C++ development framework for constrained parametric CAD</div>
   </td>
  </tr>
  </tbody>
@@ -117,19 +117,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; <a class="code" href="class_strain_relaxer.html" title="Timer for dynamic strain response.">StrainRelaxer</a>( <a class="code" href="class_haplo_model.html" title="Interface for the parametric MODEL core.">HaploModel</a> *);</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; <a class="code" href="class_haplo_model.html" title="Interface for the parametric MODEL core.">HaploModel</a> *model;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; <span class="keywordtype">void</span> switchOn();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; <span class="keywordtype">void</span> switchOff();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">void</span> step();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;signals:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">void</span> stoppedSignal();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">bool</span> isOn;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; <span class="comment">//void switchOn();</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; <span class="comment">//void switchOff();</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; <span class="keywordtype">void</span> setEnabled(<span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; <span class="keywordtype">bool</span> enabled;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keywordtype">void</span> step();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;signals:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">void</span> stoppedSignal();</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
 <div class="line"><a name="l00055"></a><span class="lineno"><a class="code" href="class_haplo_model.html">   55</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_haplo_model.html" title="Interface for the parametric MODEL core.">HaploModel</a>: <span class="keyword">public</span> QObject</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; Q_OBJECT</div>
@@ -196,7 +199,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 11 2013 10:19:46 for Sharpitor Physics by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 8 2013 15:28:00 for Sharpitor Physics by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

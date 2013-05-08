@@ -24,7 +24,7 @@
   <td style="padding-left: 0.5em;">
    <div id="projectname">Sharpitor Physics
    </div>
-   <div id="projectbrief">Biomimetic structural modelling and visualization</div>
+   <div id="projectbrief">Qt-based C++ development framework for constrained parametric CAD</div>
   </td>
  </tr>
  </tbody>
@@ -79,20 +79,50 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Sharpitor Physics Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Sharpitor Physics is a Qt-based C++ development framework for constrained parametric CAD.</p>
-<p>It is suitable for general CAD applications, but there is an emphasis on support for biomimetic features, specifically:</p>
+<div class="textblock"><p><b>General features</b></p>
 <ul>
-<li>bend-developable surfaces and associated generalized 'anisotropic' elastic response to deformation.</li>
+<li><p class="startli">Reactively coupled gui components</p>
+<ul>
+<li>parameters view/edit</li>
+<li>2d drawings view/edit</li>
+<li>3d rendering view<ul>
+<li>hardware-accelerated (OpenGl)</li>
+<li>zoom/pan/rotation</li>
+<li>photograph juxtaposition</li>
+<li>light source rotation</li>
+<li>parts-level colour/texture editing</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <ul>
-<li>a biologically-informed 'developmental' approach to surface subdivision</li>
+<li>Session history stack<ul>
+<li>undo/redo</li>
+<li>open/save as XML document</li>
 </ul>
-<p>Author: Nicholas Braun; contact(at)sharpitor.com</p>
-<p>Last update: 11042013 </p>
+</li>
+</ul>
+<ul>
+<li>Remote server link up<ul>
+<li>auxiliary cloud processing</li>
+<li>user authentication</li>
+<li>version monitoring</li>
+</ul>
+</li>
+</ul>
+<p>Additional features specifically geared towards <b>surface-of-revolution</b> structures:</p>
+<ul>
+<li>editing tool for subdivision into developable strips</li>
+<li>uv-mapping algorithms for conversion of developable strips to 2d cutting patterns.</li>
+<li>physical simulation of relaxational response to strain in the structure</li>
+</ul>
+<p>contact(at)sharpitor.com</p>
+<p>Last update: 08052013 </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 11 2013 10:19:46 for Sharpitor Physics by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 8 2013 15:28:00 for Sharpitor Physics by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>
