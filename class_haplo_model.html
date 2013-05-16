@@ -86,6 +86,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_haplo_model-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">HaploModel Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -113,9 +114,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>seamAddedSignal</b> (
 <tr class="memitem:ac88ea804717aab02c37a5e7b7f41d09e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac88ea804717aab02c37a5e7b7f41d09e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setRibsSignal</b> ()</td></tr>
 <tr class="separator:ac88ea804717aab02c37a5e7b7f41d09e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8707d2a96f5139af1edcd0bcbde3af41"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8707d2a96f5139af1edcd0bcbde3af41"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>commitSignal</b> ()</td></tr>
+<tr class="separator:a8707d2a96f5139af1edcd0bcbde3af41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a54e50c14e59054b1a1748caead6405a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54e50c14e59054b1a1748caead6405a5"></a>
+virtual QString&#160;</td><td class="memItemRight" valign="bottom"><b>pepsYaml</b> () const =0</td></tr>
+<tr class="separator:a54e50c14e59054b1a1748caead6405a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1637c5d991d6c29567fa4cd3fe1f980d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1637c5d991d6c29567fa4cd3fe1f980d"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>loadPepsYaml</b> (QString pepsYaml)=0</td></tr>
+<tr class="separator:a1637c5d991d6c29567fa4cd3fe1f980d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a349f3b6e37dc01e35449a3829ca29fc3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a349f3b6e37dc01e35449a3829ca29fc3"></a>
 virtual float&#160;</td><td class="memItemRight" valign="bottom"><b>sweepAngle</b> (int ribIndex) const =0</td></tr>
 <tr class="separator:a349f3b6e37dc01e35449a3829ca29fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,6 +165,12 @@ virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>tooMuchStrain
 <tr class="memitem:a0ef0978beb8caeb3e41291b8f2964118"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ef0978beb8caeb3e41291b8f2964118"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>strainRespond</b> ()=0</td></tr>
 <tr class="separator:a0ef0978beb8caeb3e41291b8f2964118"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:af36516cfb4100e1c08367ef6cd85b5b6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af36516cfb4100e1c08367ef6cd85b5b6"></a>
+<a class="el" href="class_strain_relaxer.html">StrainRelaxer</a>&#160;</td><td class="memItemRight" valign="bottom"><b>relaxer</b></td></tr>
+<tr class="separator:af36516cfb4100e1c08367ef6cd85b5b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Interface for the parametric MODEL core. </p>
@@ -167,7 +183,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>strainRespond
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 8 2013 15:28:00 for Sharpitor Physics by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 16 2013 15:55:23 for Sharpitor Physics by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

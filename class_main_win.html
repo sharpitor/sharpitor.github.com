@@ -104,18 +104,33 @@ Public Slots</h2></td></tr>
 <tr class="memitem:a58e84765819a888d3997e99664a6b838"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58e84765819a888d3997e99664a6b838"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>on_actionExit_triggered</b> ()</td></tr>
 <tr class="separator:a58e84765819a888d3997e99664a6b838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4d181f4019d0fbeebb4e9630ec1432b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4d181f4019d0fbeebb4e9630ec1432b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>on_actionUndo_triggered</b> ()</td></tr>
+<tr class="separator:ac4d181f4019d0fbeebb4e9630ec1432b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f4c5ac25f7c37c15499d5e6b59cf77c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4f4c5ac25f7c37c15499d5e6b59cf77c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>on_actionRedo_triggered</b> ()</td></tr>
+<tr class="separator:a4f4c5ac25f7c37c15499d5e6b59cf77c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af445e366d554dd0b5e40518b3971322a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af445e366d554dd0b5e40518b3971322a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>on_actionCommit_triggered</b> ()</td></tr>
+<tr class="separator:af445e366d554dd0b5e40518b3971322a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e6d8f83c616d04c982af51aa5be127b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e6d8f83c616d04c982af51aa5be127b"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>on_actionAbout_triggered</b> ()</td></tr>
 <tr class="separator:a5e6d8f83c616d04c982af51aa5be127b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26477e31fee22e6a8daab1a00a0795a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26477e31fee22e6a8daab1a00a0795a0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>on_actionSettings_triggered</b> ()</td></tr>
 <tr class="separator:a26477e31fee22e6a8daab1a00a0795a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16b79d53e3036a1cc1dc50bda5cbfba6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a16b79d53e3036a1cc1dc50bda5cbfba6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>on_actionSave_triggered</b> ()</td></tr>
+<tr class="separator:a16b79d53e3036a1cc1dc50bda5cbfba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6594616becf3f34ee075ec327e2e7a75"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6594616becf3f34ee075ec327e2e7a75"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>on_actionSave_As_triggered</b> ()</td></tr>
+<tr class="separator:a6594616becf3f34ee075ec327e2e7a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3db95fc7e6348ebdb9f6037d972ab941"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3db95fc7e6348ebdb9f6037d972ab941"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>MainWin</b> (<a class="el" href="class_elevation.html">Elevation</a> *elevation, <a class="el" href="class_polygonal.html">Polygonal</a> *polygonal, <a class="el" href="class_tree_m_v.html">TreeMV</a> *params, <a class="el" href="class_haplo_pop_m_v.html">HaploPopMV</a> *haploPopMV, QDialog *about, QDialog *settings)</td></tr>
-<tr class="separator:a3db95fc7e6348ebdb9f6037d972ab941"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a129df0887d995b3e88ea9656af15e240"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a129df0887d995b3e88ea9656af15e240"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>MainWin</b> (QString title, QString iconFile, <a class="el" href="class_elevation.html">Elevation</a> *elevation, <a class="el" href="class_polygonal.html">Polygonal</a> *polygonal, <a class="el" href="class_tree_m_v.html">TreeMV</a> *params, <a class="el" href="class_haplo_pop_m_v.html">HaploPopMV</a> *haploPopMV, QDialog *about, QDialog *settings, <a class="el" href="class_session_stack_sh_ph.html">SessionStackShPh</a> *session)</td></tr>
+<tr class="separator:a129df0887d995b3e88ea9656af15e240"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Top level. </p>
@@ -126,7 +141,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 8 2013 15:28:00 for Sharpitor Physics by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu May 16 2013 15:55:23 for Sharpitor Physics by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>
